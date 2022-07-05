@@ -84,12 +84,13 @@ Dans un projet, une différence de configuration entre deux développeurs peut s
 Ce dossier est à placer à la racine de votre projet (workspace). La configuration sera donc propre au projet. 
 
 La [documentation](https://code.visualstudio.com/docs/editor/settings-sync) vscode l'expliquera bien mieux que moi, mais en résumé, vous pouvez avoir des paramètres propre à votre projet (configuration eslint, ruler...), des snippets, une configuration de debug ou encore une recommandation d'extension à utiliser pour le projet. Ainsi, quand un nouveau développeur intégrera votre projet, vscode lui suggéra une liste d'extension à installer.
+*** Tu pourrais mettre un exemple d'extension recommandée à installer ?***
 
 - photo settings
 ___
 
 Merci beaucoup d'avoir lu cet article, j'espère qu'il vous a plu et surtout qu'il vous a appris des choses !
 
-Il reste encore évidemment beaucoup de sujet à aborder : intégration avec WSL, docker, debug avec breakpoint... 
+Il reste encore évidemment beaucoup de sujets à aborder : intégration avec WSL, docker, debug avec points d'arrêts... 
 
-Dans un futur article, j'approfondirai la gestion de git avec VS Code qui pour moi est un sujet tellement large qu'il mérite un article dédié ! En attendant, testez Git Graph qui vous facilitera forcément la vie !
+Dans un futur article, j'approfondirai la gestion de git avec VS Code qui, pour moi, est un sujet tellement large qu'il mérite un article dédié ! En attendant, testez Git Graph qui vous facilitera forcément la vie !
