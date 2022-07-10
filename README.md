@@ -9,7 +9,17 @@ Le classique `Ctrl + Space` (`Cmd + Esc` sur mac) permet de faire de la suggesti
 
 Pour changer de fichier rapidement, utilisez `Ctrl + P` (ou `Cmd + P` sur Mac), et tapez un nom de fichier.
 
+
 Rajouter `Shift` à l'instruction précédente permet d'exécuter des commandes (ex: Restart TypeScript Server), mais surtout d'accéder à des paramètres sans avoir à naviguer dans les multiples onglets.
+
+<figure>
+    <img src="assets/ctrl_p.gif" alt="ctrl + p">
+    <center><caption>Ctrl + P et Ctrl + Shift + P<caption></center>
+</figure>
+
+Avec `Ctrl + Shift + [UP/DOWN]` (`Cmd + Option + [UP/DOWN]` sur Mac), vous pouvez activer le multi-curseur. Cela permet d'écrire le même contenu en même temps sur plusieurs lignes. 
+
+Après avoir surligné un pattern, chaque utilisation de `Ctrl + D` (`Cmd + D` sur Mac) vous permettra d'ajouter à la sélection la prochaine occurrence de ce même pattern, et donc de l'éditer en même temps ! 
 
 # Configuration de base
 
@@ -23,12 +33,13 @@ Pour le thème, c'est vraiment selon votre choix ! Il en existe des centaines : 
 
 D'ailleurs, vous pouvez noter que la modification du thème et des icônes se fait rapidement avec le shortcut `Ctrl + Shift + P` dont je vous parlais plus haut ! 
 
-- METTRE EXEMPLE THEME
-- METTRE PHOTO ICONS 
-
 Pour la police de caractère, c'est aussi à la carte ! J'utilise depuis plus d'un an **[Fira Code](https://github.com/tonsky/FiraCode)** qui rajoute un petit quelque chose grâce a ses ligatures. Pour l'installer, il y a une [page](https://github.com/tonsky/FiraCode/wiki) dédiée sur leur GitHub, avec des instructions selon l'OS mais aussi selon l'IDE !
 
-- FIRA CODE EXAMPLE
+<figure>
+    <img src="assets/theme_font_icons.png" alt="Theme, font and icons">
+    <center><caption>Helium Icons + Darcula Theme from IntelliJ + Fira Code<caption></center>
+</figure>
+
 
 ## Extensions
 
@@ -62,8 +73,41 @@ Je vous recommande aussi
 ```
 qui permet de mettre la sidebar sur la droite. Au début, ça peut sembler contre intuitif, mais cela permet au code de ne pas bouger lorsque l'on ouvre, ferme ou redimensionne la fenêtre.
 
+<figure>
+    <img src="assets/sidebar.gif" alt="Sidebar">
+    <center><caption>Sidebar à droite vs à gauche<caption></center>
+</figure>
 
-- GIF SIDEBAR 
+On peut aussi configurer vscode afin qu'il formatte le fichier et fix les erreurs eslint "basiques". Pour cela vous pouvez utiliser une configuration proche de la suivante : 
+
+```json
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
+  },
+  "[graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+```
+
+J'ai défini un formatter selon le type de fichier. Vous pouvez faire de même en fonction de vos languages et extensions utilisées au quotidien !
+
+
 
 # Configuration avancée
 
@@ -75,18 +119,23 @@ Il existe plein de solutions permettant d'éviter de réinstaller l'ensemble de 
 
 Ainsi, vous pouvez récupérer la configuration de votre poste, même celle de votre poste personnel !
 
-- SCREEN SYNCHRO ON
-
 ## Workspace configuration
 
 Dans un projet, une différence de configuration entre deux développeurs peut s'avérer problématique. Il est possible de surcharger la configuration de l'utilisateur avec le dossier `.vscode`.
 
 Ce dossier est à placer à la racine de votre projet (workspace). La configuration sera donc propre au projet. 
 
-La [documentation](https://code.visualstudio.com/docs/editor/settings-sync) vscode l'expliquera bien mieux que moi, mais en résumé, vous pouvez avoir des paramètres propre à votre projet (configuration eslint, ruler...), des snippets, une configuration de debug ou encore une recommandation d'extension à utiliser pour le projet. Ainsi, quand un nouveau développeur intégrera votre projet, vscode lui suggéra une liste d'extension à installer.
-*** Tu pourrais mettre un exemple d'extension recommandée à installer ?***
+La [documentation](https://code.visualstudio.com/docs/editor/settings-sync) vscode l'expliquera bien mieux que moi, mais en résumé, vous pouvez avoir des paramètres propre à votre projet (configuration eslint, ruler...), des snippets, une configuration de debug ou encore une recommandation d'extension à utiliser pour le projet. Ainsi, quand un nouveau développeur intégrera votre projet, vscode lui suggéra une liste d'extension à installer. Il est aussi possible de les consulter en cliquant sur l'icônes des extensions et en ajoutant le filtre `@recommended`.
 
-- photo settings
+<figure>
+    <img src="assets/recommended.png" alt="recommended">
+    <center><caption>Extensions recommandées<caption></center>
+</figure>
+
+<figure>
+    <img src="assets/vscode-folder.png" alt="vscode folder">
+    <center><caption>extensions.json & settings.json<caption></center>
+</figure>
 ___
 
 Merci beaucoup d'avoir lu cet article, j'espère qu'il vous a plu et surtout qu'il vous a appris des choses !
